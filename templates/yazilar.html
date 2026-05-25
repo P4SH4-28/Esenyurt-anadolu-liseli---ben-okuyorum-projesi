@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Öğrenci Yazıları ve Röportaj — Esenyurt Anadolu Lisesi Faaliyet Dergisi">
+    <title>Yazılar — Ben Okuyorum İstanbul Okuyor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dergi">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('index') }}">
+                Ben Okuyorum İstanbul Okuyor
+                <span>Esenyurt Anadolu Lisesi Faaliyet Dergisi</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Menüyü aç/kapat">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+                <ul class="navbar-nav gap-1">
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('index') }}">Ana Sayfa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('faaliyetler') }}">Faaliyetler</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="{{ url_for('yazilar') }}">Yazılar</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <p class="page-header-eyebrow">Kalemden Kalbe</p>
+            <h1 class="page-header-title">Yazılar</h1>
+            <p class="page-header-sub">Röportajlar, denemeler ve öğrencilerimizin kaleminden seçkiler.</p>
+        </div>
+    </header>
+
+    <section class="yazilar-section">
+        <div class="container">
+            <div class="row g-5">
+
+                <!-- SOL: RÖPORTAJ -->
+                <div class="col-12 col-lg-7">
+                    <div class="roportaj-wrap">
+                        <p class="roportaj-label">Özel Röportaj</p>
+                        <h2 class="roportaj-title">Kitap ve Kitabın Yönleri</h2>
+                        <p class="roportaj-meta">
+                            Esenyurt Anadolu Lisesi Öğrencisi Ecrin'nin Edebiyat Hocası Zeynep Hocayla Yaptığı Röportaj
+                        </p>
+
+                        <div class="roportaj-qa">
+                            <p class="roportaj-soru">Ecrin: Merhabalar, ben Esenyurt Anadolu Lisesinden Ecrin. Bu gün okulumuzun değerli öğretmenlerinden biriyle, Zeynep hocamla beraber kitap okumaya yönelik bir röportaj düzenledik. İzninizle ben başlıyorum. Birine okumayı sevdirmek için ne denersiniz Zeynep hocam?</p>
+                            <p class="roportaj-cevap">Zeynep H: Aklıma gelen ilk şey onların ilgi alanlarını belirlemek olurdu. Tabii ki önce kişide ne olması lazım? Kitap okuma niyeti olması lazım... niyet ettikten sonra kitap okumaya nerden nasıl başlayacağını bilmiyorsa önce kişiden ilgi alanlarını tespit etmesini isterdim ve ilgi alanları hakkında kitap önermekle işe başlardım. Mesela fantastik dizilerden hoşlanan bir kişiye öncelikle fantastik kurgular önerirdim. Tabii ki tek etken bu da değil. Kişiyi kitaplara kazandırmak için belki sürükleyici, birazda ince bir kitap önererek işe başlayabilirdim. Yeni kitap okumaya başlayan birine hemen 500-600 sayfalık bir kitabı önermenin de doğru olmayacağını düşünüyorum.</p>
+                        </div>
+
+                        <div class="roportaj-qa">
+                            <p class="roportaj-soru">Ecrin: Pekala hocam, biliyorsunuz ki bir kitabı parlatıp öne çıkaran yıldız şeyler var. Sizce bir kitabı en etkili kılan şey nedir?</p>
+                            <p class="roportaj-cevap">Zeynep H: Bence bir kitabı en etkili kılan şey okuyucuyla bağ kurabilmesi. Yani kitapta öyle şeyler olmalı ki, kişi o kitabı okuduktan sonra asla unutmamalı. Kitap okuyucunun içinde duygular oluşturmalı. Sadece kitabı okuyup bitirmek değil mesele. Aynı zamanda okuyucu kitap bittikten sonra da kitap üzerinde düşünebilmeli. Bence okuyucuyu düşünmeye sürükleyen kitap etkilidir. Bir kitabı parlatan şey budur.</p>
+                        </div>
+
+                        <div class="roportaj-qa">
+                            <p class="roportaj-soru">Ecrin: Peki biraz daha kişisel bir soru sorarsam, sizi en çok etkileyen kitap veya yazar hangisidir?</p>
+                            <p class="roportaj-cevap">Zeynep H: Ben bu soruya ayrı ayrı cevap vereyim çünkü ikisi içinde tek bir cevabım yok. Beni en çok etkileyen kitaba şu anki benle cevap vereyim. Çünkü kitap okumaya, yazarlar tanımaya devam ettikçe bu sorunun cevabı da elbet değişecektir. Lakin şu anki ben için en etkili kitap, Japon yazar Kazuo Ishiguro'nun "Günden Kalanlar" adlı kitabı olabilir... Neyin beni etkilediğini soracak olursan kitabın üslubunu öne sürebilirim. Çünkü bu kitapta kitap bize söylemek istediklerini söylemeden bize anlatabiliyor. Yani kitabın anlatmak istediği şey kitabın satırlarında gizli. Bunun bir kitap için büyük bir başarı olduğunu düşünüyorum.</p>
+                        </div>
+
+                        <div class="roportaj-qa">
+                            <p class="roportaj-soru">Ecrin: Belki sizin için ilk olduğu için bu kadar etkileyici olmuştur. En sevdiğiniz yazar kimdir?</p>
+                            <p class="roportaj-cevap">Zeynep H: Kesinlikle öyle. En sevdiğim yazara gelecek olursak Ahmet Hamdi Tanpınar'ın yeri bende çok ayrı. Çünkü Ahmet Hamdi Tanpınar'ın kitaplarını okurken anlamaktan ziyade hissediyorum. Kitaplarındaki karakterlerin hisleri, tereddütleri, huzursuzlukları bir şekilde tanıdık gelmeyi başarıyor insana. Özetle Ahmet Hamdi Tanpınar'ın diliyle beni çok etkilediğini söyleyebilirim.</p>
+                        </div>
+
+                        <div class="roportaj-qa">
+                            <p class="roportaj-soru">Ecrin: Peki bir kitabın içine girebilme şansınız olsaydı, bu yazarların eserlerinden biri olur muydu?</p>
+                            <p class="roportaj-cevap">Zeynep H: Aslında bu üzerine düşünülmesi gereken bir soru ama sanmıyorum. Çünkü orada olmak istediğim ayrı bir eser var. Okudun mu bilmiyorum ama Franz Kafka'nın "Dönüşüm" adlı eseri orada bulunmak istememe sebep olacak türden bir eser. Bu hikayemizde ana karakter Gregor Samsa bir sabah uyandığında kendini böceğe dönmüş halde buluyor. Aslında bu eserde anlatılan şey Gregor Samsa'nın çevresindekilerden farklı düşünmeye başlaması ve hayatı sorgulaması. Hikayede böceğe dönüşmesi, farklı düşünmeye başladığı anda çevresindekiler tarafından dışlanmasını sembolize ediyor. Benim bu eserde bulunmak isteme sebebim Gregor'a destek çıkmak. Ben de hikayede onun gibi farklı düşünür biri olarak girmek ve sonrasında farklı düşünen insanların olabileceğini hatırlatmak isterdim.</p>
+                        </div>
+
+                        <div class="roportaj-qa">
+                            <p class="roportaj-soru">Ecrin: İnsanlar genelde daha neşeli kitaplarda bulunmak ister, sizin tercihiniz neden bu yönde?</p>
+                            <p class="roportaj-cevap">Zeynep H: Ben bu hikayede Gregor'a acıdım. Onun yanında olsaydım ona vereceğim destek zaten beni neşelendirirdi.</p>
+                        </div>
+
+                        <div class="roportaj-qa">
+                            <p class="roportaj-soru">Ecrin: Peki kitap okumaya ayrılan zaman hakkında ne düşünüyorsunuz hocam? Sizce kitap okumaya zaman mı ayrılır yoksa zaman mı bulunur?</p>
+                            <p class="roportaj-cevap">Zeynep H: Bu sorunun cevabı kişiden kişiye değişir. Hepimizin öncelikleri farklı olan bir hayatı var. Ama ben kendi bakış açımdan cevaplayacak olursam bence kitap okumaya zaman ayrılmaz, zaman bulunur. Burada değinilmesi gereken nokta kitap okumanın okuyucuda neyi ifade ettiği. Zaten bir insan okumakta mutluluk buluyorsa elbet kitap okumaya zaman bulacaktır. Çünkü zaten bu bir alışkanlık haline gelmiştir. Eğer kişi kitap okumaktan zevk almıyorsa zaman ayırmaya çalışacaktır fakat bulamayacaktır.</p>
+                        </div>
+
+                        <div class="roportaj-qa">
+                            <p class="roportaj-soru">Ecrin: Teknolojinin bunun üzerinde çok etkisi olduğu söyleniyor. Sanki önümüzdeki sayfalar dijital ekranlara dönüşüyor gibi. Sizce teknoloji kitap okuma alışkanlığını etkiliyor mu?</p>
+                            <p class="roportaj-cevap">Zeynep H: Bence teknolojinin kitap okuma alışkanlığını etkileyen hem olumlu hem de olumsuz yönleri var. E-kitap gibi bir teknolojiyle kitap okumayı mekândan bağımsız hale getiriyor. Özellikle sesli kitaplar sayesinde yürürken, otobüste bir yere yetişmeye çalışırken kitapları dinleyebiliyoruz. Lakin günümüze bakarsak olumsuz yönleri bana daha fazlaymış gibi geliyor. Özellikle farklı platformlarda bulunan kısa videolar beyni hızlı tüketime alıştırıyor. Böyle oldukça da insandaki sabır faktörü azalmış oluyor. Bu sebeple gençlerimiz hızlı tüketime alıştığı için uzun metinleri anlamakta zorlanıyor. Yine de iş bence teknolojiye nasıl baktığında sonlanıyor. Faydalı içeriklerden yararlanmak ve kendimize katkı sağlamak yine bizim elimizde.</p>
+                        </div>
+
+                        <div class="roportaj-qa">
+                            <p class="roportaj-soru">Ecrin: Peki ya ders başarısının kitap okumakla olan orantısı hakkında neler söyleyebilirsiniz? Sizce kitap okumak ders başarısında etkili mi?</p>
+                            <p class="roportaj-cevap">Zeynep H: Evet etkiler ama kitap okuyan kişi derslerinde yüzde yüz başarılı olur da diyemeyiz. Fakat öğrencinin yorumlama ve kavrayabilme becerisine inanılmaz bir katkı sağlar. Kavrama becerisine aslına bakarsak matematik dersinde bile ihtiyacımız var. Bir soruyu çözebilmek için öncelikle soruyu anlayabilmemiz ve bizden ne istediğini bilmemiz lazım. Bunun içinde kitabın bize faydası olacaktır. Aynı zamanda yeni müfredatın öğrencilerden istediği yazma atölyelerinde senden fabl ve benzeri hikayeler yazmanı isteyebiliyoruz. Kitap okuduğun zaman konuştuğun gibi yazmaman gerektiğini fark ediyorsun. İfadelerin daha güçlü ve kuvvetli oluyor ve bu da senin kompozisyonunu geliştiriyor.</p>
+                        </div>
+
+                        <div class="roportaj-qa">
+                            <p class="roportaj-soru">Ecrin: Söylediklerinize tamamen katılıyorum hocam. Kitap okumak hayata daha geniş bir pencereden bakmamızı sağlıyor. Zamanınızı bana ve sorularıma ayırdığınız için çok teşekkür ediyorum.</p>
+                            <p class="roportaj-cevap">Zeynep H: Ne demek, teşekküre hiç gerek yok. Bu projede olmak ve bu soruları cevaplamak beni de mutlu etti.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- SAĞ: ÖĞRENCİ YAZILARI -->
+                <div class="col-12 col-lg-5">
+                    <div class="sidebar-kalem">
+
+                        <div class="mb-4">
+                            <p class="section-label">Öğrencilerimizin Kaleminden</p>
+                            <h3 class="section-title" style="font-size:1.6rem;">Seçki</h3>
+                            <div class="section-rule"></div>
+                        </div>
+
+                        <!-- Öznur -->
+                        <div class="kalem-card">
+                            <p class="kalem-card-label">Deneme · 10/I</p>
+                            <h4 class="kalem-card-author">Öznur Taşpınar — "Tablodan Bir Parça: Okumak"</h4>
+                            <div class="kalem-blockquote">
+                                <p>Hayatımız bir tablo gibidir ve birden fazla renk içerir. Hayallerimiz, zevklerimiz, ailemiz, dostlarımız veya daha fazlası bu renklerin canlı kalmasını sağlar. Benim fikrimce bir kitaba başlamak, tabloya yeni bir renk ve canlılık kazandırmaktır. Çünkü her bir kitap, başka bir dünyaya açılan kapı gibidir; hayal gücümüzün konuşabildiği, zihnimizin dinlenebildiği, hatta belki de yalnız olmadığımızı anladığımız bir dünyaya açılan kapı...</p>
+                                <p>Okumak sadece eski kalıpları yıkmak değil, zihnimizde yepyeni ve özgür dünyalar inşa etmektir. Okumak, sayfalardaki o sessiz cümlelerin canlanıp hayata dokunan birer sese dönüşmesidir. O halde kitaplar sadece okuyup geçmek için midir? Değildir. Anlattığımız ve anlatamadığımız her şey içindir.</p>
+                            </div>
+                        </div>
+
+                        <!-- Meryem -->
+                        <div class="kalem-card">
+                            <p class="kalem-card-label">Deneme · 10/I</p>
+                            <h4 class="kalem-card-author">Meryem Çiftci — "Mürekkebin Kalpteki İzi"</h4>
+                            <div class="kalem-blockquote">
+                                <p>İnsan zihni geniş, duygu dolu, karmaşık olabiliyor. Her insanın içinde anlatılmayı bekleyen ayrı bir hikâye vardır. Kitaplarda durum farklı; bir kâğıt parçası ile dilediğin dünyaya yolculuk yapabilirsin. Sayfalar açıldıkça sınırlar da kalkar.</p>
+                                <p>Kitaplar zihnin nimetidir. Öğretir, güldürür, ağlatır, kimi zaman da meraklandırır. Bazen tek bir cümle bile insanın içine işlemeye yeter. Kitaplar insanla toplum arasında kurulan görünmez bir köprüdür. Her okunan satır, ruhun pasını biraz daha siler.</p>
+                            </div>
+                        </div>
+
+                        <!-- İkra -->
+                        <div class="kalem-card">
+                            <p class="kalem-card-label">Deneme · 10/I</p>
+                            <h4 class="kalem-card-author">İkra Amine Yazıcıoğlu — "Ormanın Fısıltısında Kendini Bulmak"</h4>
+                            <div class="kalem-blockquote">
+                                <p>Toprağın kalbine kök salmış ormanlar, insanın unuttuğu huzuru yaprakların gölgesinde saklar. Tıpkı sayfaların yaprakları arasında saklanan huzur gibi insan orada huzur bulur, yaşanmışlıkları derin ve sessizce fısıldar. İçine giren herkes biraz daha sakin, biraz daha kendine döner.</p>
+                                <p>Yani anlayacağınız, ormanlar sizi içine çeker ve kendinizi bulmanıza yardım olur; kitaplar da insanı kendi iç dünyasına götürerek kim olduğumuzu hatırlatır.</p>
+                            </div>
+                        </div>
+
+                        <!-- Damlanur -->
+                        <div class="kalem-card">
+                            <p class="kalem-card-label">Deneme · 10/I</p>
+                            <h4 class="kalem-card-author">Damlanur Balcı — "Akıl, Kalp ve Kitaplar"</h4>
+                            <div class="kalem-blockquote">
+                                <p>Bazen içimizdeki sesler o kadar yüksektir ki susturmak zorunda kalırız. Kitap okumak bu yollardan biridir. Çıkartamadığımız sesleri, anlatamadığımız duygularımızı ve en önemlisi kaybettiğimiz düşüncelerimizi kitaplarda buluruz.</p>
+                                <p>Kitaplar da bu konuda çok işe yarar. İnsanı suskunluk hâlinden çıkartıp gerçek dünya ile tanıştırır ve insanı kendisi olmaya çeker. Bütün bu hisler cümbüşü gözünün önünde ise, neden hâlâ elinde bir kitap yok?</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-dergi">
+        <div class="container">
+            <p class="footer-brand">Ben Okuyorum İstanbul Okuyor</p>
+            <p class="footer-sub">Esenyurt Anadolu Lisesi &nbsp;·&nbsp; Faaliyet Dergisi</p>
+            <div class="footer-rule"></div>
+            <p class="footer-copy">© 2025 Esenyurt Anadolu Lisesi. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

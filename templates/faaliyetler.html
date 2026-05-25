@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Faaliyetler Galerisi — Esenyurt Anadolu Lisesi Faaliyet Dergisi">
+    <title>Faaliyetler — Ben Okuyorum İstanbul Okuyor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dergi">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('index') }}">
+                Ben Okuyorum İstanbul Okuyor
+                <span>Esenyurt Anadolu Lisesi Faaliyet Dergisi</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Menüyü aç/kapat">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+                <ul class="navbar-nav gap-1">
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('index') }}">Ana Sayfa</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="{{ url_for('faaliyetler') }}">Faaliyetler</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('yazilar') }}">Yazılar</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <p class="page-header-eyebrow">2024 — 2025 Eğitim Öğretim Yılı</p>
+            <h1 class="page-header-title">Faaliyetler Galerisi</h1>
+            <p class="page-header-sub">Yedi etkinlik, yüzlerce an, tek bir tutku: okumak.</p>
+        </div>
+    </header>
+
+    <section class="faaliyetler-section">
+        <div class="container">
+            <div class="row g-4">
+
+                <!-- FAAALİYET 1: Kütüphane Çalışmaları -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <article class="faaliyet-card" data-bs-toggle="modal" data-bs-target="#modal1" role="button" tabindex="0">
+                        <div class="faaliyet-card-img-wrap">
+                            <img src="{{ url_for('static', filename='img/Kolileri hazırlıyorlar.jpg') }}" alt="Kütüphane Çalışmaları">
+                            <div class="faaliyet-card-overlay"><div class="faaliyet-card-overlay-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+                            <div class="faaliyet-photo-count">4 Fotoğraf</div>
+                        </div>
+                        <div class="faaliyet-card-body">
+                            <p class="faaliyet-card-number">Faaliyet 01</p>
+                            <h2 class="faaliyet-card-title">Kütüphane Çalışmaları ve Toplu Okuma Etkinliği</h2>
+                            <p class="faaliyet-card-desc">Proje çalışmalarımıza okul kütüphanemizi düzenleyerek başladık. Kitaplar tasnif edilip raflara yerleştirilerek kütüphane düzenleme çalışmaları tamamlandıktan sonra kütüphanemiz faaliyete geçirildi.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- FAAALİYET 2: Evde Okuma / Afiş -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <article class="faaliyet-card" data-bs-toggle="modal" data-bs-target="#modal2" role="button" tabindex="0">
+                        <div class="faaliyet-card-img-wrap">
+                            <img src="{{ url_for('static', filename='img/Evde kitap okuyorlar. (Kolaj).jpg') }}" alt="Evde Okuma ve Afiş Çalışmaları">
+                            <div class="faaliyet-card-overlay"><div class="faaliyet-card-overlay-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+                            <div class="faaliyet-photo-count">3 Fotoğraf</div>
+                        </div>
+                        <div class="faaliyet-card-body">
+                            <p class="faaliyet-card-number">Faaliyet 02</p>
+                            <h2 class="faaliyet-card-title">Evde Kitap Okuma Saatleri ve "İstanbul Okuyor" Afiş Çalışmaları</h2>
+                            <p class="faaliyet-card-desc">Proje kapsamında akşamları ailece okuma etkinlikleri yaptık. Öğrencilerimiz evlerinde okuma saatleri düzenleyerek fotoğraflarını paylaştı. Kedi kolajlı yaratıcı afiş tasarımları projenin görsel kimliğine büyük katkı sağladı.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- FAAALİYET 3: Okul Panosu -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <article class="faaliyet-card" data-bs-toggle="modal" data-bs-target="#modal3" role="button" tabindex="0">
+                        <div class="faaliyet-card-img-wrap">
+                            <img src="{{ url_for('static', filename='img/Pano önünde poz. (Öğretmenle).jpg') }}" alt="Okul Panosu ve Çiçekli Etkinlik">
+                            <div class="faaliyet-card-overlay"><div class="faaliyet-card-overlay-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+                            <div class="faaliyet-photo-count">3 Fotoğraf</div>
+                        </div>
+                        <div class="faaliyet-card-body">
+                            <p class="faaliyet-card-number">Faaliyet 03</p>
+                            <h2 class="faaliyet-card-title">Okul Panosu ve Çiçekli Etkinlik Fotoğrafları</h2>
+                            <p class="faaliyet-card-desc">Proje kapsamında hazırladığımız panoyla kitap okumanın önemini vurguladık. Panomuzdaki çiçeklerle kitap okumanın eğitici yönünün yanı sıra geliştirici ve güzelleştirici yönünü ortaya çıkarmak istedik.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- FAAALİYET 4: Araştırma ve Not Alma -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <article class="faaliyet-card" data-bs-toggle="modal" data-bs-target="#modal4" role="button" tabindex="0">
+                        <div class="faaliyet-card-img-wrap">
+                            <img src="{{ url_for('static', filename='img/Not alıyorlar.jpg') }}" alt="Araştırma ve Not Alma">
+                            <div class="faaliyet-card-overlay"><div class="faaliyet-card-overlay-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+                            <div class="faaliyet-photo-count">5 Fotoğraf</div>
+                        </div>
+                        <div class="faaliyet-card-body">
+                            <p class="faaliyet-card-number">Faaliyet 04</p>
+                            <h2 class="faaliyet-card-title">Kütüphanede Araştırma ve Not Alma Faaliyetleri</h2>
+                            <p class="faaliyet-card-desc">Düzenlediğimiz kütüphane toplantılarında kitap tanıtımları, şiir okuma etkinlikleri, yazma atölyeleri ve slogan hazırlama çalışmaları yaptık. Bu çalışmaları okulumuzun Instagram sayfasında ve okul dergisinde paylaştık.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- FAAALİYET 5: Kitap Fuarı -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <article class="faaliyet-card" data-bs-toggle="modal" data-bs-target="#modal5" role="button" tabindex="0">
+                        <div class="faaliyet-card-img-wrap">
+                            <img src="{{ url_for('static', filename='img/Kitap fuarında inceleme.jpg') }}" alt="Kitap Fuarı Gezisi">
+                            <div class="faaliyet-card-overlay"><div class="faaliyet-card-overlay-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+                            <div class="faaliyet-photo-count">3 Fotoğraf</div>
+                        </div>
+                        <div class="faaliyet-card-body">
+                            <p class="faaliyet-card-number">Faaliyet 05</p>
+                            <h2 class="faaliyet-card-title">Kitap Fuarı Gezisi ve Kültür Turu</h2>
+                            <p class="faaliyet-card-desc">"Ben Okuyorum İstanbul Okuyor" projesinde görevli öğrencilerimiz 13-21 Aralık tarihlerinde TÜYAP Fuar ve Kongre Merkezinde düzenlenen 43. Uluslararası Kitap Fuarına katılıp birçok kitap ve yazarla buluşma fırsatı buldu.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- FAAALİYET 6: Okul Önü Grup -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <article class="faaliyet-card" data-bs-toggle="modal" data-bs-target="#modal6" role="button" tabindex="0">
+                        <div class="faaliyet-card-img-wrap">
+                            <img src="{{ url_for('static', filename='img/Okul önünde toplu poz(öğrenciler).jpg') }}" alt="Okul Önü Toplu Grup">
+                            <div class="faaliyet-card-overlay"><div class="faaliyet-card-overlay-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+                            <div class="faaliyet-photo-count">2 Fotoğraf</div>
+                        </div>
+                        <div class="faaliyet-card-body">
+                            <p class="faaliyet-card-number">Faaliyet 06</p>
+                            <h2 class="faaliyet-card-title">Okul Önü Toplu Grup ve Hatıra Fotoğrafları</h2>
+                            <p class="faaliyet-card-desc">"Kütüphanemde Misafir Var" etkinliği kapsamında Esenyurt Fen Lisesi öğrencilerini okulumuzda ağırladık. Okulumuzu tanıttıktan sonra kütüphanemizde misafirlerimizle kitaplar ve okuma üzerine sohbet ettik.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- FAAALİYET 7: Kapanış -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <article class="faaliyet-card" data-bs-toggle="modal" data-bs-target="#modal7" role="button" tabindex="0">
+                        <div class="faaliyet-card-img-wrap">
+                            <img src="{{ url_for('static', filename='img/Kitaplarla poz veriyorlar.jpg') }}" alt="Kapanış ve Değerlendirme">
+                            <div class="faaliyet-card-overlay"><div class="faaliyet-card-overlay-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+                            <div class="faaliyet-photo-count">3 Fotoğraf</div>
+                        </div>
+                        <div class="faaliyet-card-body">
+                            <p class="faaliyet-card-number">Faaliyet 07</p>
+                            <h2 class="faaliyet-card-title">Kapanış ve Genel Değerlendirme Fotoğrafları</h2>
+                            <p class="faaliyet-card-desc">"Kitap Kumbarası" etkinliği kapsamında okul genelinde kitap toplama kampanyası başlattık. Toplanan kitaplar yeni açılan Esenyurt Fen Lisesine bağışlandı.</p>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MODAL 1: Kütüphane Çalışmaları ===== -->
+    <div class="modal fade modal-dergi" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal1Label">Faaliyet 01 — Kütüphane Çalışmaları ve Toplu Okuma Etkinliği</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div id="c1" class="carousel slide" data-bs-ride="false" data-bs-wrap="false">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="{{ url_for('static', filename='img/Kolileri hazırlıyorlar.jpg') }}" class="d-block w-100 modal-carousel-img" alt="Kolileri hazırlıyorlar">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ url_for('static', filename='img/Kitapları tasnif ediyorlar.jpg') }}" class="d-block w-100 modal-carousel-img" alt="Kitapları tasnif ediyorlar">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ url_for('static', filename='img/Kitaplıkları düzenliyorlar.jpg') }}" class="d-block w-100 modal-carousel-img" alt="Kitaplıkları düzenliyorlar">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ url_for('static', filename='img/Kütüphanede kitap seçiyorlar.jpg') }}" class="d-block w-100 modal-carousel-img" alt="Kütüphanede kitap seçiyorlar">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#c1" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Önceki</span></button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#c1" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Sonraki</span></button>
+                    </div>
+                </div>
+                <div class="modal-footer"><p>Kütüphane çalışmaları — koli hazırlama, tasnif, düzenleme ve kitap seçimi.</p></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== MODAL 2: Evde Okuma / Afiş ===== -->
+    <div class="modal fade modal-dergi" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal2Label">Faaliyet 02 — Evde Kitap Okuma Saatleri ve Afiş Çalışmaları</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div id="c2" class="carousel slide" data-bs-ride="false" data-bs-wrap="false">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="{{ url_for('static', filename='img/Evde kitap okuyorlar. (Kolaj).jpg') }}" class="d-block w-100 modal-carousel-img" alt="Evde kitap okuyorlar">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ url_for('static', filename='img/Ailece kitap okuyorlar. (Kolaj).jpg') }}" class="d-block w-100 modal-carousel-img" alt="Ailece kitap okuyorlar">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ url_for('static', filename='img/Proje afiş tasarımı.jpg') }}" class="d-block w-100 modal-carousel-img" alt="Proje afiş tasarımı">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#c2" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Önceki</span></button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#c2" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Sonraki</span></button>
+                    </div>
+                </div>
+                <div class="modal-footer"><p>Evde okuma kolajları ve proje afiş tasarımları.</p></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== MODAL 3: Okul Panosu ===== -->
+    <div class="modal fade modal-dergi" id="modal3" tabindex="-1" aria-labelledby="modal3Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal3Label">Faaliyet 03 — Okul Panosu ve Çiçekli Etkinlik Fotoğrafları</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div id="c3" class="carousel slide" data-bs-ride="false" data-bs-wrap="false">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="{{ url_for('static', filename='img/Pano önünde poz. (Öğretmenle).jpg') }}" class="d-block w-100 modal-carousel-img" alt="Pano önünde öğretmenle poz">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ url_for('static', filename='img/Pano önünde poz. (Öğrenciler).jpg') }}" class="d-block w-100 modal-carousel-img" alt="Pano önünde öğrenciler">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ url_for('static', filename='img/Pano önünde poz. (Grupça).jpg') }}" class="d-block w-100 modal-carousel-img" alt="Pano önünde grupça poz">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#c3" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Önceki</span></button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#c3" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Sonraki</span></button>
+                    </div>
+                </div>
+                <div class="modal-footer"><p>Öğrencilerin el emeğiyle hazırlanan "Ben Okuyorum İstanbul Okuyor" panosu.</p></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== MODAL 4: Araştırma ve Not Alma ===== -->
+    <div class="modal fade modal-dergi" id="modal4" tabindex="-1" aria-labelledby="modal4Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal4Label">Faaliyet 04 — Kütüphanede Araştırma ve Not Alma Faaliyetleri</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div id="c4" class="carousel slide" data-bs-ride="false" data-bs-wrap="false">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="{{ url_for('static', filename='img/Not alıyorlar.jpg') }}" class="d-block w-100 modal-carousel-img" alt="Not alıyorlar">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ url_for('static', filename='img/Not alıyorlar (2).jpg') }}" class="d-block w-100 modal-carousel-img" alt="Not alıyorlar 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ url_for('static', filename='img/Not alıyorlar (3).jpg') }}" class="d-block w-100 modal-carousel-img" alt="Not alıyorlar 3">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ url_for('static', filename='img/Kütüphanede bekliyorlar.jpg') }}" class="d-block w-100 modal-carousel-img" alt="Kütüphanede bekliyorlar">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ url_for('static', filename='img/Kütüphanede kitap okuyorlar.jpg') }}" class="d-block w-100 modal-carousel-img" alt="Kütüphanede kitap okuyorlar">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#c4" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Önceki</span></button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#c4" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Sonraki</span></button>
+                    </div>
+                </div>
+                <div class="modal-footer"><p>Araştırma, not alma ve kütüphane okuma çalışmaları.</p></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== MODAL 5: Kitap Fuarı ===== -->
+    <div class="modal fade modal-dergi" id="modal5" tabindex="-1" aria-labelledby="modal5Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal5Label">Faaliyet 05 — Kitap Fuarı Gezisi ve Kültür Turu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div id="c5" class="carousel slide" data-bs-ride="false" data-bs-wrap="false">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="{{ url_for('static', filename='img/Kitap fuarında inceleme.jpg') }}" class="d-block w-100 modal-carousel-img" alt="Kitap fuarında inceleme">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ url_for('static', filename='img/Kitap standında gezinti.jpg') }}" class="d-block w-100 modal-carousel-img" alt="Kitap standında gezinti">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ url_for('static', filename='img/Yazarla hatıra fotoğrafı.jpg') }}" class="d-block w-100 modal-carousel-img" alt="Yazarla hatıra fotoğrafı">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#c5" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Önceki</span></button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#c5" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Sonraki</span></button>
+                    </div>
+                </div>
+                <div class="modal-footer"><p>İstanbul Kitap Fuarı — inceleme, gezinti ve yazarla hatıra fotoğrafı.</p></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== MODAL 6: Okul Önü Grup ===== -->
+    <div class="modal fade modal-dergi" id="modal6" tabindex="-1" aria-labelledby="modal6Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal6Label">Faaliyet 06 — Okul Önü Toplu Grup ve Hatıra Fotoğrafları</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div id="c6" class="carousel slide" data-bs-ride="false" data-bs-wrap="false">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="{{ url_for('static', filename='img/Okul önünde toplu poz(öğrenciler).jpg') }}" class="d-block w-100 modal-carousel-img" alt="Okul önünde toplu poz">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ url_for('static', filename='img/Okul önü hatırası.jpg') }}" class="d-block w-100 modal-carousel-img" alt="Okul önü hatırası">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#c6" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Önceki</span></button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#c6" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Sonraki</span></button>
+                    </div>
+                </div>
+                <div class="modal-footer"><p>Birlikte geçirilen güzel günlerin kalıcı tanıkları — okul önü hatıra fotoğrafları.</p></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== MODAL 7: Kapanış ===== -->
+    <div class="modal fade modal-dergi" id="modal7" tabindex="-1" aria-labelledby="modal7Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal7Label">Faaliyet 07 — Kapanış ve Genel Değerlendirme Fotoğrafları</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div id="c7" class="carousel slide" data-bs-ride="false" data-bs-wrap="false">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="{{ url_for('static', filename='img/Kitaplarla poz veriyorlar.jpg') }}" class="d-block w-100 modal-carousel-img" alt="Kitaplarla poz veriyorlar">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ url_for('static', filename='img/Toplantı yapıyorlar.jpg') }}" class="d-block w-100 modal-carousel-img" alt="Toplantı yapıyorlar">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ url_for('static', filename='img/Kütüphanede okuma hatırası.jpg') }}" class="d-block w-100 modal-carousel-img" alt="Kütüphanede okuma hatırası">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#c7" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Önceki</span></button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#c7" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Sonraki</span></button>
+                    </div>
+                </div>
+                <div class="modal-footer"><p>Yıl sonu kapanış — kitaplarla poz, toplantı ve okuma hatırası.</p></div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-dergi">
+        <div class="container">
+            <p class="footer-brand">Ben Okuyorum İstanbul Okuyor</p>
+            <p class="footer-sub">Esenyurt Anadolu Lisesi &nbsp;·&nbsp; Faaliyet Dergisi</p>
+            <div class="footer-rule"></div>
+            <p class="footer-copy">© 2025 Esenyurt Anadolu Lisesi. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelectorAll('.faaliyet-card[role="button"]').forEach(function(card) {
+            card.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    new bootstrap.Modal(document.querySelector(card.getAttribute('data-bs-target'))).show();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
